@@ -1,4 +1,3 @@
-// src/sections/MainSection.jsx
 import React from "react";
 import "../styles/MainSection.css";
 import mainImage from "../assets/p6.jpg";

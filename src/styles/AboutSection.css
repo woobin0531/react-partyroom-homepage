@@ -1,11 +1,11 @@
 :root {
-  --main-bg: #19191a; /* 전체 섹션 배경 */
-  --card-bg: #222325; /* 카드/박스 배경 */
-  --border-color: #393940; /* 카드 테두리 */
-  --shadow-color: rgba(0, 0, 0, 0.11); /* 그림자 */
-  --font-white: #fdfdfd; /* 흰색 글씨 */
-  --font-grey: #ececec; /* 연한 글씨 */
-  --accent-red: #ff4757; /* 포인트 컬러(빨강) */
+  --main-bg: #19191a;
+  --card-bg: #222325;
+  --border-color: #393940;
+  --shadow-color: rgba(0, 0, 0, 0.11);
+  --font-white: #fdfdfd;
+  --font-grey: #ececec;
+  --accent-red: #ff4757;
 }
 
 .about-section {

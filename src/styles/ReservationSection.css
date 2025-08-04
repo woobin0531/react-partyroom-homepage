@@ -1,6 +1,6 @@
 :root {
   --main-bg: #19191a;
-  --card-bg: rgba(40, 40, 43, 0.87); /* reservation container background */
+  --card-bg: rgba(40, 40, 43, 0.87);
   --border-grey: #393940;
   --point-red: #ff4757;
   --font-white: #fff;
@@ -59,7 +59,7 @@
 }
 
 .react-calendar__month-view__weekdays {
-  color: #ffbaba; /* 적당한 인접한 토닝 */
+  color: #ffbaba;
   font-weight: 600;
 }
 

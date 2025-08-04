@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/ReviewsSection.css";
 
-// 커스텀 confirm 함수: "확인"/"취소" 순서로 버튼 노출
 function customConfirm(message, callback) {
   const overlay = document.createElement("div");
   overlay.className = "review-confirm-overlay";
@@ -27,7 +26,6 @@ function customConfirm(message, callback) {
 }
 
 const ReviewsSection = () => {
-  // localStorage 연동: 새로고침해도 후기 보존
   const [reviews, setReviews] = useState(() => {
     try {
       const stored = localStorage.getItem("reviews");
@@ -43,7 +41,6 @@ const ReviewsSection = () => {
     localStorage.setItem("reviews", JSON.stringify(reviews));
   }, [reviews]);
 
-  // 폼 입력 변경
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({
@@ -52,7 +49,6 @@ const ReviewsSection = () => {
     }));
   };
 
-  // 후기 등록
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.content || !form.nickname || !form.password) {
@@ -63,12 +59,11 @@ const ReviewsSection = () => {
     setForm({ content: "", nickname: "", password: "" });
   };
 
-  // 삭제 (확인/취소 버튼 순서 수정 및 비밀번호 체크)
   const handleDelete = (review) => {
     customConfirm("정말 삭제하시겠습니까?", (ok) => {
       if (!ok) return;
       const pw = window.prompt("비밀번호를 입력하세요:");
-      if (pw === null) return; // 취소 누르면 아무 메시지도 없음
+      if (pw === null) return;
       if (pw === review.password) {
         setReviews(reviews.filter((r) => r.id !== review.id));
       } else {
@@ -77,7 +72,6 @@ const ReviewsSection = () => {
     });
   };
 
-  // 수정 (확인/취소 버튼 순서 수정 및 비밀번호 체크)
   const handleEdit = (review) => {
     customConfirm("수정하시겠습니까?", (ok) => {
       if (!ok) return;

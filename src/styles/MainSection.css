@@ -10,9 +10,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  /* flex 대신 block, position 기반 유지 */
   display: block;
-  background-color: var(--main-bg); /* 만약 이미지가 없을 경우 대비 */
+  background-color: var(--main-bg);
 }
 
 .main-overlay {
@@ -21,17 +20,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* 기존 반투명 검정 대신 변수 사용 */
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main-text {
   position: absolute;
-  bottom: 10%; /* 아래에서 10% 떨어진 위치 */
-  left: 10%; /* 왼쪽에서 10% 떨어진 위치 */
+  bottom: 10%;
+  left: 10%;
   z-index: 1;
   color: var(--font-white);
-  /* 텍스트 그림자 최신 변수로 대체 */
   text-shadow: 2px 2px 8px var(--shadow-black);
   text-align: left;
 }

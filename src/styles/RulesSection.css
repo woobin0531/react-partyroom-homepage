@@ -1,7 +1,7 @@
 :root {
-  --main-bg: #19191a; /* 전체 섹션 배경 */
-  --card-bg: #232325; /* 카드 배경 */
-  --border-color: #ff4757; /* 좌측 강조선 */
+  --main-bg: #19191a;
+  --card-bg: #232325;
+  --border-color: #ff4757;
   --shadow-color: rgba(255, 71, 87, 0.08);
   --font-white: #fdfdfd;
   --font-grey: #eee;

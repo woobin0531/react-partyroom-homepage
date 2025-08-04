@@ -1,6 +1,5 @@
-// src/App.jsx
 import React from "react";
-import "./App.css"; // App.css도 곧 정리할 예정입니다.
+import "./App.css";
 import Header from "./components/Header";
 import MainSection from "./sections/MainSection";
 import AboutSection from "./sections/AboutSection";
