@@ -1,0 +1,81 @@
+:root {
+  --main-bg: #19191a; /* 전체 섹션 배경 */
+  --card-bg: #232325; /* 카드 배경 */
+  --border-color: #ff4757; /* 좌측 강조선 */
+  --shadow-color: rgba(255, 71, 87, 0.08);
+  --font-white: #fdfdfd;
+  --font-grey: #eee;
+  --accent-red: #ff4757;
+}
+
+.rules-section {
+  padding: 110px 0 80px 0;
+  background: var(--main-bg);
+  max-width: 1190px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.rules-section h2 {
+  color: #fdfdfd;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+  max-width: 730px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  box-sizing: border-box;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  background: var(--card-bg);
+  border-left: 6px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  padding: 18px 24px;
+  box-sizing: border-box;
+}
+
+.rule-num {
+  display: inline-block;
+  color: var(--accent-red);
+  font-size: 21px;
+  font-weight: 900;
+  width: 34px;
+  flex-shrink: 0;
+  text-align: center;
+  margin-right: 13px;
+  letter-spacing: -1px;
+}
+
+.rule-text {
+  font-size: 16.6px;
+  color: var(--font-grey);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+@media (max-width: 720px) {
+  .rules-list {
+    max-width: 97vw;
+  }
+  .rule-item {
+    flex-direction: column;
+    padding: 16px 14px;
+  }
+  .rule-num {
+    margin-bottom: 7px;
+    margin-right: 0;
+  }
+}

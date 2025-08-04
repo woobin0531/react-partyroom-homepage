@@ -1,0 +1,287 @@
+:root {
+  --main-bg: #19191a; /* 섹션 배경 */
+  --card-bg: #222325; /* 카드 배경 */
+  --border-grey: #393940; /* 테두리 */
+  --accent-red: #ff4757; /* 포인트 색상 */
+  --font-white: #fdfdfd; /* 기본 흰색 */
+  --font-grey: #e6e6e6; /* 연한 회색 */
+  --shadow-color: rgba(0, 0, 0, 0.12);
+}
+
+/* 후기/리뷰 섹션 배경과 기본 레이아웃 */
+.reviews-section {
+  padding: 110px 0 80px 0;
+  background: var(--main-bg);
+  max-width: 1190px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 타이틀 스타일 */
+.reviews-section h2 {
+  color: #fdfdfd;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* 후기 작성 폼 레이아웃 */
+.review-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 후기 입력 textarea (고정 크기, 스크롤 가능) */
+.fixed-textarea {
+  flex: 2;
+  min-width: 310px;
+  max-width: 470px;
+  min-height: 90px;
+  height: 90px;
+  max-height: 90px;
+  resize: none;
+  overflow-y: auto;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-grey);
+  border-radius: 8px;
+  color: var(--font-white);
+  font-size: 16px;
+  padding: 10px 14px;
+  margin: 0 2px;
+  line-height: 1.6;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* 닉네임/비밀번호 input */
+.review-form input {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-grey);
+  border-radius: 8px;
+  color: var(--font-white);
+  font-size: 15px;
+  padding: 8px 8px;
+  height: 36px;
+  outline: none;
+  margin: 0 2px;
+  min-width: 77px;
+  max-width: 110px;
+}
+
+/* 제출 버튼 스타일 */
+.review-form button.review-submit {
+  background: var(--accent-red);
+  color: var(--font-white);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 26px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: background 0.15s;
+}
+
+/* 후기 리스트 너비 정리 */
+.review-list {
+  max-width: 820px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 후기 없는 상태 메시지 */
+.no-review {
+  padding: 29px 0 16px 0;
+  text-align: center;
+  color: #aaa;
+}
+
+/* 개별 후기 카드 스타일 */
+.review-item {
+  background: var(--card-bg);
+  border-radius: 10px;
+  margin-bottom: 17px;
+  padding: 19px 21px 13px 19px;
+  color: var(--font-grey);
+  box-shadow: 0 1px 8px var(--shadow-color);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 후기 헤더: 닉네임과 별도 */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 닉네임 텍스트 */
+.review-nickname {
+  font-weight: bold;
+  color: var(--font-white);
+  margin-right: 7px;
+}
+
+/* 후기 내용 */
+.review-content {
+  margin: 11px 0 0 0;
+  color: var(--font-grey);
+  font-size: 16px;
+  word-break: break-word;
+}
+
+/* 후기 수정/삭제 버튼 영역 */
+.review-actions {
+  position: absolute;
+  right: 18px;
+  bottom: 9px;
+}
+
+/* 수정/삭제 버튼 스타일 */
+.review-edit,
+.review-delete {
+  border: none;
+  background: transparent;
+  color: var(--accent-red);
+  margin-left: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14.2px;
+  transition: color 0.2s ease;
+}
+
+.review-edit:hover,
+.review-delete:hover {
+  text-decoration: underline;
+  color: #fff; /* 호버 시 흰색으로 강조 */
+}
+
+/* 커스텀 confirm 모달 오버레이 */
+.review-confirm-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* 커스텀 confirm 모달 박스 */
+.review-confirm-modal {
+  background: #252526;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(50, 0, 10, 0.15);
+  padding: 26px 33px 19px 33px;
+  text-align: center;
+  min-width: 230px;
+  box-sizing: border-box;
+}
+
+/* 모달 메시지 텍스트 */
+.review-confirm-message {
+  color: var(--font-white);
+  margin-bottom: 18px;
+  font-size: 17.2px;
+}
+
+/* 모달 버튼 그룹 */
+.review-confirm-btns {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+/* 모달 버튼 스타일 */
+.review-confirm-btns button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #212;
+  color: var(--font-white);
+  cursor: pointer;
+  transition: background 0.13s;
+  outline: none;
+}
+
+.review-confirm-btns .review-ok {
+  background: var(--accent-red);
+  color: var(--font-white);
+}
+
+.review-confirm-btns .review-ok:hover {
+  background: #e63e48;
+}
+
+.review-confirm-btns .review-cancel {
+  background: var(--border-grey);
+  color: #ccc;
+}
+
+.review-confirm-btns .review-cancel:hover {
+  background: #252526;
+}
+
+/* 반응형: 모바일 화면에서 후기 폼, 리스트 정렬 */
+@media screen and (max-width: 640px) {
+  .review-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .fixed-textarea {
+    flex: 3;
+    min-width: 310px;
+    max-width: 470px;
+    min-height: 90px;
+    height: 90px;
+    max-height: 90px;
+    resize: none;
+    overflow-y: auto;
+    background: var(--card-bg);
+    border: 1.5px solid var(--border-grey);
+    border-radius: 8px;
+    color: var(--font-white);
+    font-size: 16px;
+    padding: 10px 14px;
+    margin: 0 2px;
+    line-height: 1.6;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .review-form input {
+    background: var(--card-bg);
+    border: 1.5px solid var(--border-grey);
+    border-radius: 8px;
+    color: var(--font-white);
+    font-size: 15px;
+    padding: 8px 8px;
+    height: 36px;
+    outline: none;
+    margin: 0 2px;
+    min-width: 77px;
+    max-width: 110px;
+  }
+  .review-list {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,243 @@
+:root {
+  --main-bg: #19191a;
+  --card-bg: rgba(40, 40, 43, 0.87); /* reservation container background */
+  --border-grey: #393940;
+  --point-red: #ff4757;
+  --font-white: #fff;
+  --font-grey: #eee;
+  --shadow-color: rgba(0, 0, 0, 0.11);
+}
+
+/* 예약 섹션 wrapper 배경/패딩/레이아웃 */
+.reservation-section {
+  padding: 110px 20px 70px;
+  background: var(--main-bg);
+  color: var(--font-white);
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* 타이틀 스타일 */
+.section-title {
+  color: var(--font-white);
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* 내부 컨텐츠 flex 박스 */
+.reservation-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 달력 컨테이너 스타일 (카드 배경/테두리 등) */
+.calendar-container.improved-calendar-bg {
+  min-width: 340px;
+  max-width: 410px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  padding: 24px 8px 14px 8px;
+  border: 2px solid var(--border-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 590px;
+}
+
+/* react-calendar 기본 스타일 커스텀 */
+.react-calendar {
+  width: 100%;
+  background: transparent;
+  color: var(--font-white);
+  border: none;
+}
+
+.react-calendar__month-view__weekdays {
+  color: #ffbaba; /* 적당한 인접한 토닝 */
+  font-weight: 600;
+}
+
+.react-calendar__tile {
+  padding: 16px 0 8px 0;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  transition: background 0.16s, color 0.16s;
+}
+
+.react-calendar__tile--now {
+  background: rgba(255, 71, 87, 0.13);
+  color: var(--point-red);
+}
+
+.react-calendar__tile:enabled:hover {
+  background: #2a2d2d;
+  color: var(--font-white);
+}
+
+/* 예약불가 범례 */
+.calendar-legend {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 12.5px;
+}
+
+.legend.impossible {
+  background: var(--point-red);
+  color: var(--font-white);
+  border-radius: 7px;
+  padding: 2px 9px;
+}
+
+/* 예약 버튼 컨테이너 (달력 밑) */
+.calendar-pkg-select-under-bar {
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* 선택된 날짜 텍스트 */
+.calendar-selected-date {
+  color: var(--font-white);
+  margin-bottom: 9px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* 버튼 행 */
+.calendar-btn-row {
+  display: flex;
+  width: 100%;
+  gap: 14px;
+}
+
+/* 예약 버튼 기본 */
+.pkg-bar-btn {
+  flex: 1 1 0px;
+  font-weight: 700;
+  border: 2px solid var(--point-red);
+  background: transparent;
+  color: var(--point-red);
+  border-radius: 9px;
+  font-size: 15px;
+  padding: 13px 0;
+  transition: all 0.16s;
+  cursor: pointer;
+  min-width: 0;
+}
+
+/* 예약 버튼 - 예약불가 상태 */
+.pkg-bar-btn.booked,
+.pkg-bar-btn[disabled] {
+  background: var(--point-red);
+  border-color: var(--point-red);
+  color: var(--font-white);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* 예약 버튼 - 선택 상태는 노란색 */
+.pkg-bar-btn.selected {
+  background: #ffdf65;
+  color: #24221b;
+  border-color: #ffdf65;
+}
+
+/* 빨간 안내문 */
+.calendar-desc-red {
+  margin: 16px 0 0 0;
+  color: var(--point-red);
+  background: rgba(55, 0, 0, 0.06);
+  padding: 9px 9px;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.63;
+}
+
+/* 오른쪽 예약 설명 박스 */
+.tall-reservation-info {
+  min-width: 340px;
+  max-width: 410px;
+  border-radius: 18px;
+  background: var(--card-bg);
+  border: 2px solid var(--border-grey);
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 10px;
+}
+
+/* 가격표 이미지 */
+.price-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 17px;
+  box-shadow: 0 0 13px var(--point-red);
+  background: none;
+}
+
+/* 예약 링크 버튼 그룹 */
+.reservation-links {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 0;
+  font-weight: 700;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.18s, color 0.18s, border-color 0.18s;
+  border: 2px solid var(--point-red);
+  margin-top: 1px;
+  background: transparent;
+  color: var(--point-red);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-primary:active,
+.btn-secondary:active {
+  background: var(--point-red);
+  color: var(--font-white);
+}
+
+/* 반응형 */
+@media screen and (max-width: 900px) {
+  .reservation-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .calendar-container.improved-calendar-bg,
+  .tall-reservation-info {
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+  .react-calendar {
+    width: 100%;
+    min-width: 0;
+  }
+  .calendar-btn-row {
+    flex-direction: column;
+    gap: 9px;
+  }
+}

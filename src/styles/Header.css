@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 40px;
+  position: relative;
+}
+
+.header-title {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--font-white);
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+  margin-top: auto;
+  height: 100%;
+}
+
+.navigation a {
+  color: var(--font-white);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.navigation a:hover {
+  color: var(--point-red);
+}
+
+.navigation a.active {
+  color: var(--point-red);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-divider {
+  height: 1px;
+  background-color: var(--header-divider);
+}
+
+.header-logo {
+  height: 100px;
+  cursor: pointer;
+  object-fit: contain;
+  display: block;
+}
