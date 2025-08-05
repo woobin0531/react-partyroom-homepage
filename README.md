@@ -99,7 +99,7 @@ src/
 
 ![Introduction](./src/assets/s3.png)
 
-### Reservation Calendar
+### Reservation Calendar & Pricing
 
 ![Calendar](./src/assets/s2.png)
 
@@ -107,7 +107,7 @@ src/
 
 ![Reviews](./src/assets/s4.png)
 
-### Pricing & Rules
+### Rules
 
 ![Rules](./src/assets/s5.png)
 
