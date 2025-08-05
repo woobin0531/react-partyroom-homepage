@@ -1,3 +1,5 @@
+<!-- prettier-ignore-start -->
+
 # FIX YOU Party Room Homepage
 
 A custom-built React homepage for a real-world party room business.  
@@ -58,30 +60,31 @@ Responsive layouts for desktop and mobile, **scroll-based navigation**, and **su
 ## 📁 Folder Structure
 
 src/
-├── assets/ # All images used in the site
-│ ├── p1.jpg ~ p11.jpg # Room photos and UI images
-│ ├── s1.png ~ s5.png # Screenshots (for README)
-│ ├── price.png # Price chart image
-│ └── top.png # Logo image
-├── components/ # Reusable UI components
-│ ├── Header.jsx
-│ └── Footer.jsx
-├── sections/ # Page sections (modular)
-│ ├── AboutSection.jsx
-│ ├── MainSection.jsx
-│ ├── ReservationSection.jsx
-│ ├── ReviewsSection.jsx
-│ └── RulesSection.jsx
-├── styles/ # CSS Modules (per section/component)
-│ ├── AboutSection.css
-│ ├── Footer.css
-│ ├── Header.css
-│ ├── MainSection.css
-│ ├── ReservationSection.css
-│ ├── ReviewsSection.css
-│ └── RulesSection.css
-├── App.jsx # Main component (renders all sections)
-└── main.jsx # Entry point (ReactDOM render)
+├── assets/               # All images used in the site
+│   ├── p1.jpg ~ p11.jpg  # Room photos and UI images
+│   ├── s1.png ~ s5.png   # Screenshots (for README)
+│   ├── price.png         # Price chart image
+│   └── top.png           # Logo image
+├── components/           # Reusable UI components
+│   ├── Header.jsx
+│   └── Footer.jsx
+├── sections/             # Page sections (modular)
+│   ├── AboutSection.jsx
+│   ├── MainSection.jsx
+│   ├── ReservationSection.jsx
+│   ├── ReviewsSection.jsx
+│   └── RulesSection.jsx
+├── styles/               # CSS Modules (per section/component)
+│   ├── AboutSection.css
+│   ├── Footer.css
+│   ├── Header.css
+│   ├── MainSection.css
+│   ├── ReservationSection.css
+│   ├── ReviewsSection.css
+│   └── RulesSection.css
+├── App.jsx               # Main component (renders all sections)
+└── main.jsx              # Entry point (ReactDOM render)
+
 
 ## 📷 Screenshots
 
@@ -150,3 +153,5 @@ Through this project, I learned how to:
 - Design for both **usability and emotional impact**, relying only on self-made resources.
 
 This project sharpened my ability to take an idea from concept to execution, balancing both technical and design goals for an actual service.
+
+<!-- prettier-ignore-end -->
