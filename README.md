@@ -57,6 +57,22 @@ Responsive layouts for desktop and mobile, **scroll-based navigation**, and **su
 
 ## 📁 Folder Structure
 
+src/
+├── assets/ # All images (p1~p11.jpg, s1~s5.png, top.png, price.png)
+├── components/ # Reusable UI components (Header.jsx, Footer.jsx)
+├── sections/ # Page sections (About, Main, Reservation, Reviews, Rules)
+│ ├── AboutSection.jsx
+│ ├── MainSection.jsx
+│ ├── ReservationSection.jsx
+│ ├── ReviewsSection.jsx
+│ └── RulesSection.jsx
+├── styles/ # CSS Modules (one per section/component)
+│ ├── AboutSection.css
+│ ├── Footer.css
+│ ├── Header.css
+│ └── ...
+├── App.jsx # Root component (renders all sections)
+
 ---
 
 ## 📷 Screenshots
@@ -67,7 +83,7 @@ Responsive layouts for desktop and mobile, **scroll-based navigation**, and **su
 
 ### Introduction
 
-![Introduction](.src/assets/s3.png)
+![Introduction](./src/assets/s3.png)
 
 ### Reservation Calendar
 
