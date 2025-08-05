@@ -59,6 +59,7 @@ Responsive layouts for desktop and mobile, **scroll-based navigation**, and **su
 
 ## 📁 Folder Structure
 
+```
 src/
 ├── assets/               # All images used in the site
 │   ├── p1.jpg ~ p11.jpg  # Room photos and UI images
@@ -84,6 +85,8 @@ src/
 │   └── RulesSection.css
 ├── App.jsx               # Main component (renders all sections)
 └── main.jsx              # Entry point (ReactDOM render)
+```
+
 
 
 ## 📷 Screenshots
