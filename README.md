@@ -65,13 +65,17 @@ Responsive layouts for desktop and mobile, **scroll-based navigation**, and **su
 
 ![Home](./src/assets/s1.png)
 
+### Introduction
+
+![Introduction](.src/assets/s3.png)
+
 ### Reservation Calendar
 
 ![Calendar](./src/assets/s2.png)
 
 ### Reviews Section
 
-![Reviews](./src/assets/s3.png)
+![Reviews](./src/assets/s4.png)
 
 ### Pricing & Rules
 
