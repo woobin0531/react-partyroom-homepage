@@ -109,7 +109,7 @@ src/
 
 ### Pricing & Rules
 
-![Rules](./src/assets/s4.png)
+![Rules](./src/assets/s5.png)
 
 ---
 
